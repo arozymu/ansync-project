@@ -14,7 +14,7 @@ const MyTimekeeper = () => {
                 onChange={(newTime) => setTime(newTime.formatted12)}
                 doneButton={(newTime) => (
                     <div
-                        style={{ textAlign: 'center', padding: '10px 0' }}
+                        style={{ textAlign: 'center', padding: '100px 0' }}
                         onClick={() => alert('new time is now', newTime.formatted12)}
                     >
                         Close
