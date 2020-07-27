@@ -15,7 +15,7 @@ class App extends Component {
     .get('https://jsonplaceholder.typicode.com/Timekeeper?_limit=10')
     .then(res => this.setState({Timekeeper: res.data}));
   }
-}
+
 
 render () {
   return (
