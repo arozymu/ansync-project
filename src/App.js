@@ -1,47 +1,26 @@
-import React, { Component } from 'react';
-import Timekeeper from './components/Timekeeper';
-import AddClick from './components/AddClick';
+import React from 'react';
+import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
 
-class App extends Component {
-
-  state = {
-    Timekeeper: []
-  };
-
-  componentDidMount() {
-    axios
-    .get('https://jsonplaceholder.typicode.com/Timekeeper?_limit=10')
-    .then(res => this.setState({Timekeeper: res.data}));
-  }
-
-
-render () {
+function App() {
   return (
-    <Router>
-      <div className="App">
-      <div className="container">
-      <Timekeeper/>
-      <Router
-      exact
-      path="/"
-      render={props =>(
-        <React.Fragment>
-          <AddClick AddClick={this.AddClick}/>
-          <Timekeeper
-          Timekeeper={this.state.Timekeeper}
-          />
-        </React.Fragment>
-      )}
-      />
-      <Route path="/about" component={About} />
-      </div>
-      </div>
-    </Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
-      }
-    };
-  
+}
 
 export default App;
