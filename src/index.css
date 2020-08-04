@@ -11,3 +11,114 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.timepicker-value text {
+  fill: rgb(17, 17, 17);
+  font-family: monospace;
+  text-anchor:       middle;
+  dominant-baseline: middle;
+}
+
+#minute {
+  font-size: 0.8em;
+}
+
+.timepicker-hour,
+.timepicker-minute {
+    -webkit-transform-origin: center;
+       -moz-transform-origin: center;
+        -ms-transform-origin: center;
+         -o-transform-origin: center;
+            transform-origin: center;
+
+    -webkit-transition: opacity 0.5s linear, visibility 0.5s linear, -webkit-transform 0.25s linear;
+            transition: opacity 0.5s linear, visibility 0.5s linear, -webkit-transform 0.25s linear;
+       -moz-transition: opacity 0.5s linear, transform 0.25s linear, visibility 0.5s linear, -moz-transform 0.25s linear;
+         -o-transition: opacity 0.5s linear, transform 0.25s linear, visibility 0.5s linear, -o-transform 0.25s linear;
+            transition: opacity 0.5s linear, transform 0.25s linear, visibility 0.5s linear;
+            transition: opacity 0.5s linear, transform 0.25s linear, visibility 0.5s linear, -webkit-transform 0.25s linear, -moz-transform 0.25s linear, -o-transform 0.25s linear;
+}
+
+.timepicker-minute {
+    opacity: 1;
+    visibility: visible;
+
+    -webkit-transform: scale(0.75);
+       -moz-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+         -o-transform: scale(0.75);
+            transform: scale(0.75);
+}
+
+.outer {
+  fill: #E8E8E8;
+}
+
+.inner {
+  fill: #F5F5F5;
+}
+
+.save {
+  fill: #3caeff;
+}
+
+.timepicker-hour {
+    opacity: 1;
+    visibility: visible;
+
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+        -ms-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+}
+
+.timepicker {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.timepicker-info {
+  color: #bac0c5;
+
+  margin: 0;
+
+  font-size:    2em;
+  line-height:  1em;
+  font-weight: bold;
+
+  text-align: center;
+}
+
+.timepicker-info-digits {
+  cursor: pointer;
+
+  -webkit-transition: color 0.25s linear;
+     -moz-transition: color 0.25s linear;
+       -o-transition: color 0.25s linear;
+          transition: color 0.25s linear;
+}
+
+.timepicker-info-digits.active {
+  color: #3caeff;
+}
+
+.timepicker-hand {
+  opacity: 0.25;
+
+  stroke: #3caeff;
+  stroke-width: 5;
+  stroke-linecap: round;
+
+  -webkit-transition-duration: 0.25s;
+     -moz-transition-duration: 0.25s;
+       -o-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+
+  -webkit-transition-timing-function: linear;
+     -moz-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
