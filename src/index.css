@@ -52,10 +52,12 @@ code {
 
 .outer {
   fill: #E8E8E8;
+  box-shadow: 5px 10px;
 }
 
 .inner {
   fill: #F5F5F5;
+  box-shadow: 5000px 200px #888888;
 }
 
 .save {
@@ -108,8 +110,8 @@ code {
 .timepicker-hand {
   opacity: 0.25;
 
-  stroke: #3caeff;
-  stroke-width: 5;
+  stroke: #1a03e6;
+  stroke-width: 10;
   stroke-linecap: round;
 
   -webkit-transition-duration: 0.25s;

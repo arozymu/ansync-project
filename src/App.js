@@ -187,6 +187,8 @@ export class Clock extends React.Component {
         const {militaryTime, mode, size} = this.props;
         const {even, hours, minutes, positionsHours, positionsMinutes} = this.state;
 
+    
+
         if (previousProps.mode === mode && previousState.hours === hours && previousState.minutes === minutes)
             return;
 
@@ -205,6 +207,7 @@ export class Clock extends React.Component {
         const dy1 = hand1.getAttribute('y1') - hand1.getAttribute('y2');
         const dx2 = hand2.getAttribute('x1') - hand2.getAttribute('x2');
         const dy2 = hand2.getAttribute('y1') - hand2.getAttribute('y2');
+
 
         const hand1Length = Math.ceil(Math.sqrt(dx1 * dx1 + dy1 * dy1));
         const hand2Length = Math.ceil(Math.sqrt(dx2 * dx2 + dy2 * dy2));
@@ -232,6 +235,7 @@ export class Clock extends React.Component {
             <svg height={size} width={size}>
                 <circle 
                     className="outer"
+                    shadow=""
                     stroke="3"
                     cx="300"
                     cy="300"
@@ -240,6 +244,7 @@ export class Clock extends React.Component {
                     />
                 <circle 
                     className="inner"
+                    shadow="300"
                     stroke="3"
                     cx="300"
                     cy="300"
@@ -256,7 +261,7 @@ export class Clock extends React.Component {
                     cy="300"
                     r="50"
                     strokeWidth="6"
-                    //onClick={this.onClickSave()}
+                    onClick={this.onClickSave()}
                     />
 
                 <text x="270" y="310" fontSize="25" fill="white">SAVE</text>
@@ -319,6 +324,8 @@ export class Clock extends React.Component {
             const onClick = this.onClickMinute(minute);
             const onMouseMove = this.onMouseMoveMinute(minute);
 
+            
+
             values.push(
                 <g
                     id={'minute'}
@@ -338,6 +345,8 @@ export class Clock extends React.Component {
     }
     
     onClickSave(){
+        
+
         console.log('HOUR: ' + this.state.hours + ' - MINUTE: ' + this.state.minutes)
     }
 
@@ -404,6 +413,7 @@ export class Clock extends React.Component {
         const {militaryTime, radius, size} = this.props;
 
         const positions = [];
+        
 
         for (let index = 1; index <= (militaryTime ? 24 : 12); ++index) {
             positions.push([
@@ -419,6 +429,8 @@ export class Clock extends React.Component {
         const {radius, size} = this.props;
 
         const positions = [];
+
+        
 
         for (let index = 0; index < 60; ++index) {
             positions.push([
